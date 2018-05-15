@@ -16,7 +16,7 @@ let audio     = 'mp3';
  * DONT FORGET TO CHANGE aebinary ACCORDING TO YOUR SYSTEM
  * On Windows might look like: 'C:\\Program Files\\Adobe\\After Effects CC\\aerender.exe'
  */
-const aebinary  = '/Applications/Adobe After Effects CC/aerender';
+const aebinary  = 'C:\\Program Files\\Adobe\\Adobe After Effects CC 2018\\Support Files\\aerender.exe';
 const port      = 23234;
 
 /**
@@ -80,10 +80,10 @@ server.listen(port, () => {
             // You can create custom modules from Edit -> Templates -> Output Modules but the name and outputExt have to be in sync
             // Go to Composition -> Add Output Module to create customModule names
             // https://helpx.adobe.com/after-effects/using/basics-rendering-exporting.html#output_modules_and_output_module_settings
-            "outputModule": "h264",
+            "outputModule": "x264",
             "startFrame": 0,
             "endFrame": duration,
-            "outputExt": "mp4"
+            "outputExt": "avi"
         },
         "assets": [
             { "type": "project", "name": "project.aepx",    "src": `http://localhost:${port}/assets/${aepxfile}`}, 
